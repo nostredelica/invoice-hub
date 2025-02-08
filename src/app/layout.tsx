@@ -20,7 +20,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,7 +36,7 @@ export default function RootLayout({
           <AppTheme>
             <Box sx={{ display: "flex" }}>
               {/* Sidebar (Drawer) */}
-              <Sidebar open={open} setOpen={setOpen} />
+              <Sidebar />
 
               {/* Main Content */}
               <Box
@@ -48,7 +47,7 @@ export default function RootLayout({
                   minHeight: "100vh",
                 }}
               >
-                <AppNavbar setOpen={setOpen} />
+                <AppNavbar />
                 <Box>
                   {isLoading ? (
                     <Box
