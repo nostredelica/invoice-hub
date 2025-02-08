@@ -17,13 +17,7 @@ import MyInvoicesIcon from "../ui/svg/MyInvoicesIcon";
 
 const drawerWidth = 240;
 
-const Sidebar = ({
-  mobileOpen,
-  setMobileOpen,
-}: {
-  mobileOpen: boolean;
-  setMobileOpen: (open: boolean) => void;
-}) => {
+const Sidebar = () => {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -42,7 +36,6 @@ const Sidebar = ({
 
   const handleNavigation = (path: string) => {
     router.push(path);
-    setMobileOpen(false); // Close drawer on mobile
   };
 
   return (
