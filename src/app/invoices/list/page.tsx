@@ -1,8 +1,12 @@
 import ListInvoice from "@/app/components/invoices/ListInvoice";
-import React from "react";
+import React, { Suspense } from "react";
 
 const List = () => {
-  return <ListInvoice />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ListInvoice />
+    </Suspense>
+  );
 };
 
 export default List;
