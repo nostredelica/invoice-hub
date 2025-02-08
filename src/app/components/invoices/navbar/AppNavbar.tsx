@@ -24,7 +24,6 @@ import { MaterialUISwitch } from "../ui/CustomSwitchMode";
 import NotificationPopover from "../ui/NotificationPopover";
 import ChatIcon from "../ui/svg/ChatIcon";
 import NotificationIcon from "../ui/svg/NotificationIcon";
-import ColorModeSelect from "./ColorModeSelect";
 
 const IconButtonBox = ({ children }: { children: React.ReactNode }) => (
   <Box
@@ -48,13 +47,10 @@ export default function AppNavbar() {
   const [notifications, setNotifications] = useState<NotificationType[]>([]);
   const [unread, setUnread] = useState<boolean>(false);
 
-  const { mode, setMode } = useColorScheme();
-
-  const [checkedMode, setCheckedMode] = useState<boolean>(false);
+  const { setMode } = useColorScheme();
 
   const handleChangeMode = (event: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = event.target.checked;
-    setCheckedMode(isChecked);
     setMode(isChecked ? "dark" : "light");
   };
 
