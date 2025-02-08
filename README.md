@@ -8,17 +8,24 @@ This project is a **Next.js 15**-based **Invoice Management System** that allows
 ---
 
 ## 🚀 Getting Started
-### 1️⃣ Install Dependencies
+
+### 1️⃣ Clone Repository
+```
+git clone https://github.com/nostredelica/invoice-hub.git
+cd invoice-hub
+```
+
+### 2️⃣ Install Dependencies
 ```bash
 npm install
 ```
 
-### 2️⃣ Run the Project
+### 3️⃣ Run the Project
 ```bash
 npm run dev
 ```
 
-### 3️⃣ Open in Browser
+### 4️⃣ Open in Browser
 ```
 http://localhost:3000/invoices/list
 ```
@@ -92,7 +99,8 @@ http://localhost:3000/invoices/list
 
 ### 📜 List Invoices
 - Displays all invoices in a Material UI table.
-- Highlights selected invoice in the sidebar.
+- Search feature based on Invoice name and Invoice Number
+- Filter based on Invoice status
 
 ### ❌ Delete Invoice
 - Confirmation prompt before deletion.
